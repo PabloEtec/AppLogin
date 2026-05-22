@@ -29,46 +29,44 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val ButtLogin = findViewById<Button>(R.id.ButtLogin)
-        ButtLogin.setOnClickListener {
+        val buttLogin = findViewById<Button>(R.id.ButtLogin)
+        buttLogin.setOnClickListener {
 
             val email = findViewById<EditText>(R.id.editTextTextEmailLogin).text.toString()
             val senha = findViewById<EditText>(R.id.editTextPasswordLogin).text.toString()
-            val Intent = Intent(this, HomeActivity::class.java)
 
+            // ✅ CORREÇÃO 1: intent criado aqui (fora do callback), com nome minúsculo
+            val intent = Intent(this, HomeActivity::class.java)
             val login = Login(email = email, senha = senha)
 
-            apiService.autenticar(login).enqueue(object : Callback<Boolean>{
+            apiService.autenticar(login).enqueue(object : Callback<Boolean> {
                 override fun onResponse(
                     call: Call<Boolean?>,
                     response: Response<Boolean?>
                 ) {
-                    if(response.isSuccessful){
+                    if (response.isSuccessful) {
                         val autenticado = response.body()
-                        if (autenticado == true){
-                            startActivity(intent)
-                        }else{
+                        if (autenticado == true) {
+                            startActivity(intent) // ✅ navega só quando autenticado
+                        } else {
                             Toast.makeText(this@MainActivity, "Usuário ou senha inválido!", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
 
                 override fun onFailure(call: Call<Boolean?>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    // ✅ CORREÇÃO 2: substituído o TODO() por um Toast de erro
+                    Toast.makeText(this@MainActivity, "Erro de rede: ${t.message}", Toast.LENGTH_LONG).show()
                 }
+            })
 
-            }
-            )
-
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            // ✅ REMOVIDO: o intent duplicado e o startActivity fora do callback que estavam aqui
         }
 
-        val ButtCadastro = findViewById<Button>(R.id.buttCad)
-        ButtCadastro.setOnClickListener {
+        val buttCadastro = findViewById<Button>(R.id.buttCad)
+        buttCadastro.setOnClickListener {
             val intent = Intent(this, CadastroActivity::class.java)
             startActivity(intent)
         }
-
     }
 }

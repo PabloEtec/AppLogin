@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
 
     <TextView
         android:id="@+id/textView2"
@@ -14,53 +16,115 @@
         android:layout_marginTop="100dp"
         android:text="Olá fulano de tal"
         android:textSize="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Você está autenticado"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:orientation="horizontal"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/BtnBoleto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boletos"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp">
+        </Button>
+
+        <Button
+            android:id="@+id/BtnReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reserva"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp">
+        </Button>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Escolha uma opção abaixo:"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="150dp"
+        <Button
+            android:id="@+id/BtnAutorização"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autorização"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp">
+        </Button>
+
+        <Button
+            android:id="@+id/BtnMural"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mural"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp">
+        </Button>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="76dp"
-        android:text="Opção 1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="150dp"
+        <Button
+            android:id="@+id/BtnPreConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prestação de Contas"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp">
+        </Button>
+
+        <Button
+            android:id="@+id/BtnMudanças"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mudanças"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="76dp"
-        android:text="Opção 2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/BtnPortaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contato com a Portaria"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="16dp">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
