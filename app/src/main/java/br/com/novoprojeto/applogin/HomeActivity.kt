@@ -24,5 +24,11 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, BoletoActivity::class.java)
             startActivity(intent)
         }
+
+        val buttReserva = findViewById<Button>(R.id.buttReserva)
+        buttReserva.setOnClickListener {
+            val intent = Intent(this, ReservaActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

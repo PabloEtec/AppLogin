@@ -37,7 +37,7 @@
             android:textAlignment="center"></Button>
 
         <Button
-            android:id="@+id/BtnReserva"
+            android:id="@+id/buttReserva"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -57,7 +57,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/BtnAutorização"
+            android:id="@+id/buttAutorização"
             android:layout_width="86dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
