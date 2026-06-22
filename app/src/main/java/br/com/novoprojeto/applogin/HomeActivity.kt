@@ -30,5 +30,12 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, ReservaActivity::class.java)
             startActivity(intent)
         }
+
+        val buttAutorização = findViewById<Button>(R.id.buttAutorização)
+        buttAutorização.setOnClickListener {
+            val intent = Intent(this, AutorizacaoActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
