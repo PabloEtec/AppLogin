@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.novoprojeto.applogin.R
 import br.com.novoprojeto.applogin.model.Reserva
 
-// Altere a linha da classe para usar o nome direto do ViewHolder
 class ReservaAdapter(val reserva: List<Reserva>) : RecyclerView.Adapter<ReservaAdapter.ReservaViewHolder>() {
 
         class ReservaViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {

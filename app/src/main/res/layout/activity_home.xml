@@ -65,7 +65,7 @@
             android:text="Autorização"></Button>
 
         <Button
-            android:id="@+id/ButtMural"
+            android:id="@+id/buttMural"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -84,7 +84,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/ButtPreConta"
+            android:id="@+id/buttPreConta"
             android:layout_width="116dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -92,7 +92,7 @@
             android:text="Prestação de Contas"></Button>
 
         <Button
-            android:id="@+id/ButtMudanças"
+            android:id="@+id/buttMudanças"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -110,7 +110,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/ButtPortaria"
+            android:id="@+id/buttPortaria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

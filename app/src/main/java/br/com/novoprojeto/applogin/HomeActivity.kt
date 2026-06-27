@@ -37,5 +37,11 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val buttMural = findViewById<Button>(R.id.buttMural)
+        buttMural.setOnClickListener {
+            val intent = Intent(this, MuralActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
