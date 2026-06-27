@@ -43,5 +43,24 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val buttPreConta = findViewById<Button>(R.id.buttPreConta)
+        buttPreConta.setOnClickListener {
+            val intent = Intent(this, ContasActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        val buttMudanças = findViewById<Button>(R.id.buttMudanças)
+        buttMudanças.setOnClickListener {
+            val intent = Intent(this, MudancaActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttPortaria = findViewById<Button>(R.id.buttPortaria)
+        buttPortaria.setOnClickListener {
+            val intent = Intent(this, PortariaActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

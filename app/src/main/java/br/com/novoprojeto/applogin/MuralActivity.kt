@@ -48,4 +48,4 @@ class MuralActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-}   
+}
